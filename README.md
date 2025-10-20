@@ -1,6 +1,7 @@
-# AI Prompt Generator
+# ComfyUI Prompt Generator
 
-This node for ComfyUI creates image generation prompts. You can instruct it to come up with its own ideas, and to generate effective keywords for your image model.
+This node for ComfyUI creates *image generation prompts*. You can instruct it to come up with its own ideas, and to generate effective keywords for your image model.
+Every workflow run gets its own prompt, so you can quickly iterate on prompt variations.
 
 Example:
 
