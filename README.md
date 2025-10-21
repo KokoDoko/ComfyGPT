@@ -6,6 +6,12 @@ This node for ComfyUI creates *image generation prompts*. You can instruct it to
 
 > *Generate a Stable Diffusion prompt describing a medieval creature of the forest, wearing a medieval outfit. Use a sepia poster style. Keep the prompt the same but change the creature and the profession. Use effective keywords for stable diffusion XL.*
 
+#### Run the workflow 8 times
+
+![button](./examples/button.png) 
+
+#### Result
+
 ![creatures](./examples/forest-creatures.png)
 
 
