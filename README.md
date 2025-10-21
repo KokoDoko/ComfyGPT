@@ -1,13 +1,14 @@
 # ComfyUI Prompt Generator
 
-This node for ComfyUI creates *image generation prompts*. You can instruct it to come up with its own ideas, and to generate effective keywords for your image model.
-Every workflow run gets its own prompt, so you can quickly iterate on prompt variations.
+This node for ComfyUI creates *image generation prompts*. You can instruct it to come up with its own ideas, and to generate effective keywords for your image model. Every workflow run gets its own prompt, so you can quickly iterate on prompt variations. 
 
-Example:
+#### Example
 
-> - Generate a Stable Diffusion prompt for a small rodent driving a small vehicle. Decide what kind of rodent and what kind of vehicle.
+> *Generate a Stable Diffusion prompt describing a medieval creature of the forest, wearing a medieval outfit. Use a sepia poster style. Keep the prompt the same but change the creature and the profession. Use effective keywords for stable diffusion XL.*
 
-By running this workflow several times, you will get a team of different rodents driving different vehicles.
+![creatures](./examples/forest-creatures.png)
+
+
 
 <br><Br><br>
 
@@ -19,7 +20,8 @@ By running this workflow several times, you will get a team of different rodents
 ```
 hello-gpt-node/
 ├── __init__.py 
-├── hello_gpt.py
+├── prompt_gpt.py
+├── examples    # only for the readme file
 └── README.md
 ```
 
@@ -28,10 +30,11 @@ hello-gpt-node/
 
 ## Testing
 
-- Place the `HelloGPT` node in an empty workspace. Connect the output to the `Show any value to console/display` node.
+- You can find the `PromptGPT` node in the right-click menu. Place in an empty workspace. 
+- Connect the output to a `Show any value to console/display` node.
 - Get your own [OpenAI API key](https://platform.openai.com) and paste it in the Api Key Field.
 - Run the workflow 4 times (`run 4`) to see if every workflow pass gets a new prompt.
-- You can check the terminal for errors or log messages.
+- You can use the terminal for errors and log messages.
 
 ![image](./examples/example-debug.png)
 
@@ -47,7 +50,7 @@ hello-gpt-node/
 
 ## History
 
-If `use_history` is ON, then the OpenAI API call receives the previously generated ideas in the context. You could use this in your instructions.
+If `use_history` is ON, then the OpenAI API call receives the previously generated ideas in the context. You can use this in your instructions to get more variation, to create a narrative, or to highlight different subjects in a larger world.
 
 > History is a global variable, so multiple GPT nodes will share it. 
 
